@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>API_REST_WITH_VUE</title>
+</head>
+<body>
+ 
+        <div id="app">
+        
+         <h1>NOTAS</h1>
+        
+                <form @submit.prevent="send()">
+                    
+                    <input type="text" placeholder="Titulo" v-model="Enviardatos.titulo" required>
+                    <br>
+                    <textarea name="texto" placeholder="Descripción" id="1" cols="30" rows="10" v-model="Enviardatos.descripcion" required ></textarea>
+                    <div v-if="swich === false"><button type="submit">send</button></div>
+                    <div v-else ><button type="submit">update</button></div>
+                
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for=" index in Recivirdatos">
+                            <td> {{index.titulo}}</td>
+                            <td>{{index.descripcion}}</td>
+                            <td>
+                            <button id="uno" v-on:click="Delete(index._id)">Eliminar</button>
+                            <button id="dos" v-on:click="Update(index._id)">Actulizar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+               
+        </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+

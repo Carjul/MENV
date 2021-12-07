@@ -1,0 +1,56 @@
+h1{
+    color: rgba(3, 146, 3, 0.658);
+    text-align: center;
+}
+
+
+form input{
+    padding: 10px 15px 10px 15px;
+    margin-left: 12%;
+
+ 
+}
+form textarea{
+    padding: 10px 15px 10px 15px;
+    margin-left: 12%;
+    margin-top: 1%;
+}
+ form div button{
+    background-color:skyblue;
+    color: beige;
+    width: 60px;
+    height: 30px;
+    border-radius: 20%;
+    margin-left: 12%;
+ }
+table  {
+    border: solid 2px black;
+    width:100% ;
+    margin-top: 70px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+    
+  }
+  table, th{
+     color: teal;
+  }
+  table, td {
+      color:black;
+      font-size: 20px;
+  }
+#uno{
+    background-color: rgba(255, 0, 0, 0.637);
+    color: beige;
+    width: 60px;
+    height: 30px;
+    border-radius: 10%;
+}
+#dos{
+    background-color:rgba(25, 182, 25, 0.705);
+    color: beige;
+    width: 60px;
+    height: 30px;
+    border-radius: 10%;
+}

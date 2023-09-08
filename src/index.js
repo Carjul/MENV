@@ -3,8 +3,10 @@ const morgan = require('morgan')
 const http = require('http');
 const app = express();
 const server = http.createServer(app);
+const dotenv = require('dotenv');
  
 //ajustes 
+dotenv.config();
 app.set('port', process.env.PORT || 5000);
 app.use(express.static(__dirname + '/public'))
 

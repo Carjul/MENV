@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan')
 const http = require('http');
+const cors = require('cors')
 const app = express();
 const server = http.createServer(app);
 const dotenv = require('dotenv');
@@ -12,6 +13,7 @@ app.use(express.static(__dirname + '/public'))
 
 //middlewares
 app.use(morgan('dev'));
+app.use(cors())
 app.use(express.json());
 
 //Rutas 
